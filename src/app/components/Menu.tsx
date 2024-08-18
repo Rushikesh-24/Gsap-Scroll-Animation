@@ -12,7 +12,7 @@ const Menu = () => {
 
   return (
     <header className='sticky top-0 z-50 left-0'>
-        <div className="flex relative justify-between w-auto items-center m-5">
+        <div className="flex relative justify-between w-auto items-center p-5">
         <Link href={'/'} className='size-32 view'>
             <Image src={Logo} alt='' className='size-fit'/>
         </Link>
