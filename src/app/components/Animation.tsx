@@ -53,9 +53,6 @@ const Animation = () => {
                 imagesloaded++;
                 const progress = Math.floor((imagesloaded / frames.maxIndex) * 100);
                 setLoadingProgress(progress);
-                setTimeout(() => {
-                    console.log('hello')
-                }, 5000);
                 if (imagesloaded === frames.maxIndex) {
                   setIsLoaded(true);
                   loadImage(frames.currentIndex);
