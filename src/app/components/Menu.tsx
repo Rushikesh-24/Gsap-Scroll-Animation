@@ -70,7 +70,7 @@ const Menu = () => {
           {[...Array(6)].map((_, i) => (
             <span
               key={i}
-              className={`inline-block size-[1500px] absolute bg-gray-300 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+              className={`inline-block size-[45rem] absolute bg-gray-300 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
               ref={(el: HTMLSpanElement | null) => { circleRefs.current[i] = el!; }}
               style={{ scale: 0 }}
             ></span>
