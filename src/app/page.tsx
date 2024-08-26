@@ -1,17 +1,14 @@
 import Animation from "./components/Animation";
+import Animation2 from "./components/Animation2";
 import Cursor from "./components/Cursor";
+import Menu from "./components/Menu";
 
 export default function Home() {
   return (
     <main className="cursor-none relative">
      <Cursor/>
-     <div className="w-full h-[80vh]  bg-black flex justify-center items-center">
-      
-     </div>
+     <Animation2/>
      <Animation/>
-     <div className="w-full h-screen bg-white flex justify-center items-center">
-      
-     </div>
     </main>
   );
 }

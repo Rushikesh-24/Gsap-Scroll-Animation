@@ -50,7 +50,10 @@ const Menu = () => {
         </Link>
         <Link
           href={"#"}
-          onClick={toggleMenu}
+          onClick={(event) => {
+            event.preventDefault();
+            toggleMenu();
+          }}
           className="cursor-pointer md:size-32 size-10 flex flex-col justify-center items-center view"
         >
           <div
