@@ -11,7 +11,7 @@ const Scene = () => {
     if (tex.current) (tex.current as THREE.Mesh).rotation.y += delta;
   });
   return (
-    <group rotation={[0, 1.4, 0.5]}>
+    <group rotation={[0, 0.2, 0.5]}>
       <mesh ref={tex}>
         <cylinderGeometry args={[1, 1, 1, 60, 60, true]} />
         <meshStandardMaterial
@@ -27,7 +27,7 @@ const Scene = () => {
 const Animation2 = () => {
   return (
     <div className="w-full h-screen bg-black flex justify-center items-center sticky top-1/2 left-1/2 -translate-y-1/2 transform">
-      <Canvas camera={{ fov: 25 }} flat fallback>
+      <Canvas camera={{ fov: 22 }} flat fallback>
         <OrbitControls enableZoom={false} />
         <ambientLight />
         <Scene />

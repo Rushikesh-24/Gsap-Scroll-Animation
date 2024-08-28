@@ -92,7 +92,7 @@ const Animation = () => {
           <p className="text-white text-9xl font-extrabold p-14">{loadingProgress}%</p>
         </div>
       )}
-      <div className="parent relative top-0 left-0 w-full h-[700vh]" ref={parentRef}>
+      <div className="parent relative top-0 left-0 w-full h-[700vh] border-y border-white" ref={parentRef}>
         <div className="w-full h-screen sticky top-0 left-0">
           <canvas ref={canvasRef} className="w-full h-full" />
         </div>

@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Logo from "../../../public/logo.png";
 import Link from "next/link";
 import gsap from "gsap";
+import TransitionLink from "./TransitionLink";
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const circleRefs = useRef<HTMLSpanElement[]>([]);
@@ -48,8 +49,7 @@ const Menu = () => {
         <Link href={"/"} className="md:size-32 size-20 view">
           <Image src={Logo} alt="" className={`size-fit transition-all ease-out duration-[2s] ${menuOpen?"hue-rotate-180 invert":""}`} />
         </Link>
-        <Link
-          href={"#"}
+        <div
           onClick={(event) => {
             event.preventDefault();
             toggleMenu();
@@ -66,7 +66,7 @@ const Menu = () => {
               menuOpen ? "-rotate-[45deg] -translate-y-2 bg-black " : "translate-y-0 bg-white"
             }`}
           ></div>
-        </Link>
+        </div>
       </div>
       <div className={`fixed top-0 left-0 w-full h-full z-40 transition-all ease-in-out duration-[2s] ${menuOpen?"flex opacity-100 translate-y-0":"hidden opacity-0"}`}>
       <div className="circles">
@@ -79,6 +79,15 @@ const Menu = () => {
             ></span>
           ))}
         </div>
+        {menuOpen &&
+      <div className="h-screen w-screen bg-transparent z-40 absolute top-0 flex justify-center items-center  ">
+        <div onClick={() => setMenuOpen(false)}>
+
+        <TransitionLink href={'/Test'} className="hover:underline text-7xl"  label="NewPage"></TransitionLink>
+        </div>
+      </div>
+
+      }
       </div>
     </header>
   );
